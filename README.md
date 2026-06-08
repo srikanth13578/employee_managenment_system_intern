@@ -44,8 +44,8 @@ mvn spring-boot:run
 Once the console says "Started EmployeeApplication," open your browser to:
 http://localhost:8080
 ```
-
-## 🎓 Internship Learnings
+```
+🎓 Internship Learnings
 - Gained hands-on experience with the **Spring Ecosystem** in a professional setting.
 - Learned how to manage **Data Persistence** using JPA and MySQL.
 - Optimized server-side rendering for better application performance.
