@@ -27,7 +27,7 @@ Employee-List-Dashboard
 ## ⚙️ Installation & Setup
 
 ### 1. Database Configuration
-1. Create a MySQL database named `employee_db`.
+1. Create a MySQL database named `demo`.
 2. Open `src/main/resources/application.properties` and update your MySQL `username` and `password`.
 
 ### 2. Run the Application
