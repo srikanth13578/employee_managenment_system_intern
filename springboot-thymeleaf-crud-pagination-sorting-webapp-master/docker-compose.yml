@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  employee-db:
+    image: mysql:8.0
+    container_name: employee-db
+    ports:
+      - "3309:3306"
+    environment:
+      - MYSQL_DATABASE=demo
+      - MYSQL_ROOT_PASSWORD=admin13
+    volumes:
+      - employee_mysql_data:/var/lib/mysql
+    networks:
+      - employee_net
+
+  employee-app:
+    build: .
+    container_name: employee-management-app
+    ports:
+      - "8082:1031"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://employee-db:3306/demo?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=admin13
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.MySQL8Dialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - employee-db
+    networks:
+      - employee_net
+
+volumes:
+  employee_mysql_data:
+
+networks:
+  employee_net:
+    driver: bridge
