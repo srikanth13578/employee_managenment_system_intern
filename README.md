@@ -2,7 +2,7 @@
 
 Developed during my internship, this is a full-stack Java application designed to manage corporate employee records efficiently. It uses Server-Side Rendering (SSR) to deliver a fast and secure administrative experience.
 
-🚀 **Live App URL:** [Click Here to View Application](https://https://employeemanagenmentsystemintern-production.up.railway.app/showNewEmployeeForm)
+🚀 **Live App URL:** [Click Here to View Application](https://employeemanagenmentsystemintern-production.up.railway.app/showNewEmployeeForm)
 
 ---
 
